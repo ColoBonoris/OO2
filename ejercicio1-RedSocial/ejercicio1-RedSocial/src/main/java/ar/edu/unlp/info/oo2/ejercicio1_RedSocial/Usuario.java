@@ -41,4 +41,11 @@ public class Usuario {
 		return newTweet;
 	}
 	
+	public void modifyReTweets(Tweet tweet) {
+		this.tweets.stream()
+			.filter(twt -> twt.getClass().equals(ReTweet.class))
+			.filter(rtwt ->  rtwt.references(tweet))
+			.forEach(retweet -> retweet.referenceUnavailable());
+	}
+	
 }

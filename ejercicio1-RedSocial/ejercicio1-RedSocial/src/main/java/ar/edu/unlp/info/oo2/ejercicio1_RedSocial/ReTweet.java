@@ -9,8 +9,16 @@ public class ReTweet extends Tweet {
 		this.ref = reference;
 	}
 	
+	public boolean references(Tweet tweet) {
+		return this.ref == tweet;
+	}
+	
 	public Tweet getReference() {
 		return this.ref;
+	}
+	
+	public void referenceUnavailable() {
+		this.ref = null;
 	}
 	
 }
