@@ -1,6 +1,6 @@
 package ar.unlp.info.oo1.ejercicio4_Topografias;
 
-public class TopografiaTierra implements Topografia {
+public class TopografiaTierra extends Topografia {
 	public double proporcionAgua() {
 		return 0;
 	}
